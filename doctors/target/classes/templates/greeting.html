@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>greeting page</title>
+</head>
+<body>
+you saved
+[[${doctor}]]
+[[${doctor.id}]]
+[[${doctor.prizvushe}]]
+[[${doctor.name}]]
+[[${doctor.work}]]
+
+<p>Зареєстровані лікарі</p>
+<ul>
+    <li th:each="doctor :${allDoctors}">
+        <div>[[${doctor.prizvushe}]]</div>
+        <div>[[${doctor.work}]]</div>
+
+        <div>
+            <a th:href="@{'/delete/'+${doctor.id}}">
+                <button>Детальніше</button>
+            </a>
+        </div>
+
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <hr>
+
+    <form th:action="@{/saveUser}" method="post">
+        <input type="" name="username" placeholder="username">
+        <input type="" name="password" placeholder="password">
+        <input type="submit" value="go!">
+    </form>
+
+<h1>Заповніть дані лікаря</h1>
+<form action="/saveDoctor" method="POST" enctype="multipart/form-data">
+
+    <input type="hidden" name="id" placeholder="id">
+    <input type="" name="prizvushe" placeholder="Введіть прізвище">
+    <input type="" name="name" placeholder="Введіть імя">
+    <input type="" name="work" placeholder="Введіть відділення, спеціалізацію">
+    <input type="file" name="image" placeholder="image">
+    <input type="submit" name="" placeholder="">
+
+</form>
+    <div>
+        <br>
+        <a href="/showAllDoctors">Показати усіх лікарів</a>
+    </div>
+</body>
+</html>

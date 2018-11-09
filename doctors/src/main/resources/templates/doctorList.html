@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>doctorList</title>
+</head>
+<body>
+<ul>
+    <li th:each="doctor: ${doctors}">
+        <p th:text="${doctor.id}"></p>
+         <p th:text="${doctor.prizvushe}"></p>
+         <p th:text="${doctor.name}"></p>
+         <p th:text="${doctor.work}"></p>
+        <div>
+            <img th:src="@{'/ava/'+${doctor.avatar}}" alt="">
+        </div>
+        <div>
+            <a th:href="@{'/doctor/'+${doctor.id}}">
+                <button>Редагувати</button>
+            </a>
+        </div>
+
+        <div>
+            <a th:href="@{'/delete/{id}'(id=${doctor.id})}">
+                <button>Видалити</button>
+            </a>
+        </div>
+
+        <li>
+
+</ul>
+</body>
+</html>

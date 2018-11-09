@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <p>[[${singleDoctor.id}]]</p>
+    <p>[[${singleDoctor.prizvushe}]]</p>
+    <p>[[${singleDoctor.name}]]</p>
+    <!--<p>[[${singleDoctor.work}]]</p>-->
+    <p th:text ="${singleDoctor.work}"></p>
+
+    <form action="/updateDoctor" method="get" enctype="multipart/form-data">
+
+        <input type="hidden" name="id" placeholder="id" th:value="${singleDoctor.id}">
+        <input type="" name="prizvushe" placeholder="Введіть прізвище" th:value="${singleDoctor.prizvushe}">
+        <input type="" name="name" placeholder="Введіть імя" th:value="${singleDoctor.name}">
+        <input type="" name="work" placeholder="Введіть відділення, спеціалізацію" th:value="${singleDoctor.work}">
+        <input type="submit" name="" placeholder="">
+    </form>
+
+    <!--<form action="/deleteDoctor" method="POST" enctype="multipart/form-data">-->
+
+        <!--<input type="hidden" name="id" placeholder="id" th:value="${singleDoctor.id}">-->
+        <!--<input type="" name="prizvushe" placeholder="Введіть прізвище" th:value="${singleDoctor.prizvushe}">-->
+        <!--<input type="" name="name" placeholder="Введіть імя" th:value="${singleDoctor.name}">-->
+        <!--<input type="" name="work" placeholder="Введіть відділення, спеціалізацію" th:value="${singleDoctor.work}">-->
+        <!--<input type="submit" name="" placeholder="">-->
+    <!--</form>-->
+
+</body>
+</html>
